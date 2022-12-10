@@ -24,13 +24,12 @@ let p = new Promise((resolve, reject) => {
             resolve(data);
           }
         });
-
 });
-console.log(p); // Promise 物件 <pending>
+// console.log(p); // Promise 物件 <pending>
 // then 是接 resolve
 // catch 是接 reject
 p.then((data) => {
     console.log('成功讀到資料:', data, p);
-  }).catch((error) => {
+}).catch((error) => {
     console.error('發生錯誤了', error, p);
-  });
+});
