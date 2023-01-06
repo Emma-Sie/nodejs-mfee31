@@ -93,7 +93,9 @@ app.post('/api/stocks', async(req, res) => {
   // TODO: 完成 insert
   // let results = await pool.query("");
   // console.log(results);
-  let [data] = await pool.query('INSERT INTO stocks (`id`,`name`) VALUES (?,?)',[req.body.stockId,req.body.stockName]);
+  const inputId = req.body.stockId
+  const inputName = req.body.stockName
+  let [data] = await pool.query('INSERT INTO stocks (`id`,`name`) VALUES (?,?)',[inputId,inputName]);
   // console.log(data);
   res.json(data);
 });
