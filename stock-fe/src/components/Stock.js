@@ -38,6 +38,8 @@ const Stock = () => {
       stockId,
       stockName,
     });
+    // setStocks([...stocks, {[e.target.name]: e.target.value}])
+    setStocks([...stocks, {id: stockId, name: stockName}])
     console.log(response.data);
   }
 
